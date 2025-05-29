@@ -2,12 +2,13 @@ package randcheck
 
 import (
 	"fmt"
+	"math"
+
 	"golang.org/x/exp/constraints"
 	"gonum.org/v1/gonum/mathext"
-	"math"
 )
 
-func checkRandom[T constraints.Integer](b []T) error {
+func RunAll[T constraints.Integer](b []T) error {
 	var pval float64
 
 	pval = MonoBit(b)
